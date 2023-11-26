@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import CartButton from "../CartButton";
 
 function Nav({ setShowCart, showCart }) {
   return (
     <nav>
+      <h3>Real Fake Store</h3>
       <ul>
         <li>
           <NavLink to="/">Home</NavLink>
@@ -12,10 +13,8 @@ function Nav({ setShowCart, showCart }) {
         <li>
           <NavLink to="/shop">Shop</NavLink>
         </li>
-        <li>
-          <CartButton onClick={() => setShowCart(!showCart)}>Cart</CartButton>
-        </li>
       </ul>
+      <CartButton onClick={() => setShowCart(!showCart)}>Cart</CartButton>
     </nav>
   );
 }

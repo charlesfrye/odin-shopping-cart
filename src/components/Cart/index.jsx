@@ -6,9 +6,12 @@ function Cart({ show }) {
   const { cartItems } = useContext(CartContext);
   return (
     <div className={`cart ${show ? "show" : ""}`}>
-      <h3>Cart</h3>
       {show &&
-        cartItems.map((item) => <CartItem key={item.id} product={item} />)}
+        (cartItems.length ? (
+          cartItems.map((item) => <CartItem key={item.id} product={item} />)
+        ) : (
+          <div> Cart is empty. Pick something! </div>
+        ))}
     </div>
   );
 }
