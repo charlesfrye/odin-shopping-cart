@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
-import CartButton from "./CartButton";
+import CartButton from "../CartButton";
 
 function Nav({ setShowCart, showCart }) {
   return (
