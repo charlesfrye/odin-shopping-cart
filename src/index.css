@@ -91,7 +91,7 @@ body {
 a {
   color: rgb(212, 232, 253);
   font-weight: 500;
-  color: rgb text-decoration: inherit;
+  text-decoration: inherit;
 }
 
 a:hover {
@@ -105,14 +105,13 @@ h1 {
 
 button {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 2px solid #1a1a1a;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
 
 button:hover {
@@ -122,32 +121,4 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-nav {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #1a1a1a;
-  border-bottom: 1px solid #1a1a1a;
-  padding: 0.5em 1em;
-}
-
-ul {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  width: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav>ul {
-  padding-right: 1em;
-}
-
-nav>ul>li {
-  padding-left: 1em;
 }

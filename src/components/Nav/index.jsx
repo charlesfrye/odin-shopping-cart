@@ -1,11 +1,15 @@
 /* eslint-disable react/prop-types */
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import CartButton from "../CartButton";
+import logo from "../../assets/logo.png";
+import "./Nav.css";
 
 function Nav({ setShowCart, showCart }) {
   return (
     <nav>
-      <h3>Real Fake Store</h3>
+      <NavLink to="/">
+        <img src={logo} alt="Real Fake Store Logo" className="navbar-logo" />
+      </NavLink>
       <ul>
         <li>
           <NavLink to="/">Home</NavLink>

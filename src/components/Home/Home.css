@@ -1,0 +1,34 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.home-hero {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo-image {
+    width: 50vw;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.slogan {
+    font-size: 4vw;
+    margin: 20px 0;
+}
+
+@media (max-width: 600px) {
+    .logo-image {
+        width: 70vw;
+    }
+
+    .slogan {
+        font-size: 5.5vw;
+    }
+}

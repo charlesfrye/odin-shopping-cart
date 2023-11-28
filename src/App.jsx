@@ -10,8 +10,8 @@ function App() {
   return (
     <CartProvider>
       <Nav showCart={showCart} setShowCart={setShowCart} />
-      <Outlet />
       <Cart show={showCart} />
+      <Outlet />
     </CartProvider>
   );
 }
