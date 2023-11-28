@@ -6,11 +6,11 @@ import "./Nav.css";
 
 function Nav({ setShowCart, showCart }) {
   return (
-    <nav>
+    <nav className="navBar">
       <NavLink to="/">
-        <img src={logo} alt="Real Fake Store Logo" className="navbar-logo" />
+        <img src={logo} alt="Real Fake Store Logo" className="navBar-logo" />
       </NavLink>
-      <ul>
+      <ul className="navTabs">
         <li>
           <NavLink to="/">Home</NavLink>
         </li>
@@ -18,7 +18,9 @@ function Nav({ setShowCart, showCart }) {
           <NavLink to="/shop">Shop</NavLink>
         </li>
       </ul>
-      <CartButton onClick={() => setShowCart(!showCart)}>Cart</CartButton>
+      <CartButton className="cartButton" onClick={() => setShowCart(!showCart)}>
+        Cart
+      </CartButton>
     </nav>
   );
 }

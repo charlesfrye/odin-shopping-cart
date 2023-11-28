@@ -1,33 +1,31 @@
-nav {
+.navBar {
     width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
     background-color: #1a1a1a;
-    padding: 0.5em 1em;
     border-bottom: 1px solid #1a1a1a;
+    padding: 0.5em 1em;
 }
 
-.navbar-logo {
+.navTabs {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navBar-logo {
     height: 40px;
     width: auto;
     margin-right: 10px;
 }
 
-ul {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-nav>ul {
-    padding-right: 1em;
-}
-
-nav>ul>li {
-    padding-left: 1em;
+.cartButton {
+    align-self: flex-end;
 }
