@@ -1,17 +1,25 @@
 /* eslint-disable react/prop-types */
 import { useContext } from "react";
 import { CartContext } from "../../contexts/CartContext";
+import "./Cart.css";
 
-function Cart({ show }) {
+function Cart({ show, setShowCart }) {
   const { cartItems } = useContext(CartContext);
+
   return (
-    <div className={`cart ${show ? "show" : ""}`}>
-      {show &&
-        (cartItems.length ? (
+    <div className={`cart-wrapper ${show ? "show" : ""}`}>
+      <div className="cart-header">
+        <button className="cartButton" onClick={() => setShowCart(false)}>
+          {"Cart"}
+        </button>
+      </div>
+      <div className="cart">
+        {cartItems.length ? (
           cartItems.map((item) => <CartItem key={item.id} product={item} />)
         ) : (
           <div> Cart is empty. Pick something! </div>
-        ))}
+        )}
+      </div>
     </div>
   );
 }

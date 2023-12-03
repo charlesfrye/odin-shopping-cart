@@ -1,0 +1,82 @@
+.cart-wrapper {
+    display: flex;
+    /* Use Flexbox for layout */
+    flex-direction: column;
+    /* Stack children vertically */
+    position: fixed;
+    /* Positioned relative to the viewport */
+    top: 0;
+    right: -100%;
+    /* Initially placed off-screen */
+    height: 100%;
+    /* Full-height */
+    width: 300px;
+    /* Width of the side cart */
+    background: #242424;
+    /* Background color */
+    transition: right 0.3s;
+    /* Animate the right value over 300ms */
+    z-index: 100;
+    /* Ensure the cart is above other content */
+}
+
+.cart-wrapper.show {
+    right: 0;
+    /* Slide in to be fully visible */
+}
+
+.cart {
+    width: 100%;
+    overflow-y: auto;
+    /* Allows for scrolling if the cart is full */
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    /* Stack cart items vertically */
+    align-items: stretch;
+    /* Stretch cart items to fill the width */
+    background-color: #242424;
+    /* Match background color */
+    flex-grow: 1;
+    /* Fill the remaining space */
+    padding: 2rem;
+    /* Shadow on the left side */
+    box-shadow: -8px 0 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+.cart-header {
+    background-color: #1a1a1a;
+    /* Match nav bar color */
+    padding: 0.5em 1em;
+    /* Match nav bar padding */
+    display: flex;
+    justify-content: flex-end;
+    /* Place close button on the right */
+    min-height: 59.2px;
+    /* Minimum height to cover the button */
+}
+
+.cartButton {
+    position: absolute;
+    /* Position the button in relation to the cart wrapper */
+    top: 10px;
+    /* Spacing from the top */
+    left: -50px;
+    /* Position outside the cart */
+    transition: left 0.3s;
+    /* Animate together with the cart */
+}
+
+.cart-wrapper.show .cartButton {
+    left: 10px;
+    /* Slide in to be next to the cart */
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* Stack cart item details horizontally */
+    align-items: center;
+    /* Center vertically */
+}

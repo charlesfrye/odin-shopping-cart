@@ -10,7 +10,7 @@ function App() {
   return (
     <CartProvider>
       <Nav showCart={showCart} setShowCart={setShowCart} />
-      <Cart show={showCart} />
+      <Cart show={showCart} setShowCart={setShowCart} />
       <Outlet />
     </CartProvider>
   );
