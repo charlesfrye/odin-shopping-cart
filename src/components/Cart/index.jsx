@@ -19,6 +19,13 @@ function Cart({ show, setShowCart }) {
         ) : (
           <div> Cart is empty. Pick something! </div>
         )}
+        <button className="checkoutButton">
+          {" "}
+          Checkout $
+          {cartItems
+            .reduce((acc, item) => acc + item.price * item.quantity, 0)
+            .toFixed(2)}{" "}
+        </button>
       </div>
     </div>
   );
